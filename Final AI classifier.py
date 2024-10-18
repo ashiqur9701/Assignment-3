@@ -55,11 +55,11 @@ class ImageClassifierApp(TkinterDnD.Tk, AIModelHandler):
         right_frame = tk.Frame(main_frame, bg='#1E1E1E')
         right_frame.pack(side=tk.RIGHT, padx=20, pady=20)
 
-        # Title label with new font and color
+        # Title label with font and color
         self.title_label = tk.Label(left_frame, text="AI Image Classifier", font=("Helvetica", 20, "bold"), bg='#1E1E1E', fg="#FFD700")
         self.title_label.pack(pady=15)
 
-        # Instructions with new color
+        # Instructions with color
         self.instructions = tk.Label(left_frame, text="Upload or Drop an image to classify:", font=("Arial", 16), bg='#1E1E1E', fg="#FFD700")
         self.instructions.pack(pady=10)
 
@@ -72,7 +72,7 @@ class ImageClassifierApp(TkinterDnD.Tk, AIModelHandler):
         self.upload_button = ttk.Button(left_frame, text="Upload Image(s)", command=self.upload_images, style='TButton')
         self.upload_button.pack(pady=10)
 
-        # Drop target for drag-and-drop functionality with a vibrant background, now moved to the right
+        # Drop target for drag-and-drop functionality with a vibrant background
         self.drop_target = tk.Label(right_frame, text="Or Drop Images Here", width=40, height=10, relief="sunken", bg="#444444", fg="white")
         self.drop_target.pack(pady=15)
         self.drop_target.drop_target_register(DND_FILES)
@@ -200,3 +200,4 @@ class ImageClassifierApp(TkinterDnD.Tk, AIModelHandler):
 if __name__ == "__main__":
     app = ImageClassifierApp()
     app.mainloop()
+
